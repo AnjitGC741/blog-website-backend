@@ -1,0 +1,41 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\BlogWebsite\\BlogWebsite\\wwwroot\\Image\\00f1198c-2cf8-41ef-a337-6ae694441f48.jpg",
+      "PackagePath": "staticwebassets\\Image\\00f1198c-2cf8-41ef-a337-6ae694441f48.jpg"
+    },
+    {
+      "Id": "D:\\BlogWebsite\\BlogWebsite\\wwwroot\\Image\\119a17ba-bdfc-4a06-a4bd-15873a1b336f.jpg",
+      "PackagePath": "staticwebassets\\Image\\119a17ba-bdfc-4a06-a4bd-15873a1b336f.jpg"
+    },
+    {
+      "Id": "D:\\BlogWebsite\\BlogWebsite\\wwwroot\\Image\\22cdcb69-8bab-446c-aba2-57bf8463849b.jpg",
+      "PackagePath": "staticwebassets\\Image\\22cdcb69-8bab-446c-aba2-57bf8463849b.jpg"
+    },
+    {
+      "Id": "D:\\BlogWebsite\\BlogWebsite\\wwwroot\\Image\\3ab3cc20-a536-4e41-b1ec-75798f08645c.jpg",
+      "PackagePath": "staticwebassets\\Image\\3ab3cc20-a536-4e41-b1ec-75798f08645c.jpg"
+    },
+    {
+      "Id": "D:\\BlogWebsite\\BlogWebsite\\wwwroot\\Image\\bf2f833e-bcbd-46f5-8933-b6a66919ee25.jpeg",
+      "PackagePath": "staticwebassets\\Image\\bf2f833e-bcbd-46f5-8933-b6a66919ee25.jpeg"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.BlogWebsite.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.BlogWebsite.props",
+      "PackagePath": "build\\BlogWebsite.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.BlogWebsite.props",
+      "PackagePath": "buildMultiTargeting\\BlogWebsite.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.BlogWebsite.props",
+      "PackagePath": "buildTransitive\\BlogWebsite.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
