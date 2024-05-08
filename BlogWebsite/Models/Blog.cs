@@ -11,8 +11,8 @@ namespace BlogWebsite.Models
         public string Description { get; set; }
         public string? ImagePath { get; set; }
         public DateTime WrittenDate { get; set; }
-        public int? UpVote {  get; set; }
-        public int? DownVote { get; set;}
+        public int? UpVote { get; set; } = 0;
+        public int? DownVote { get; set; } = 0;
         public bool IsEdited { get; set; }
         [ForeignKey("User")]
         public int UserId { get; set; }
@@ -20,5 +20,7 @@ namespace BlogWebsite.Models
         [ForeignKey("BlogType")]
         public int BlogTypeId { get; set; }
         public BlogType BlogType { get; set; }
+        public ICollection<Like> Likes { get; set; }
+        public ICollection<Dislike> Dislikes { get; set; }
     }
 }

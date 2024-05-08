@@ -135,3 +135,4 @@ D:\BlogWebsite\BlogWebsite\obj\Debug\net8.0\refint\BlogWebsite.dll
 D:\BlogWebsite\BlogWebsite\obj\Debug\net8.0\BlogWebsite.pdb
 D:\BlogWebsite\BlogWebsite\obj\Debug\net8.0\BlogWebsite.genruntimeconfig.cache
 D:\BlogWebsite\BlogWebsite\obj\Debug\net8.0\ref\BlogWebsite.dll
+D:\BlogWebsite\BlogWebsite\obj\Debug\net8.0\BlogWebsite.sourcelink.json

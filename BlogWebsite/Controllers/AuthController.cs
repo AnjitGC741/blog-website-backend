@@ -11,24 +11,46 @@ namespace BlogWebsite.Controllers
     [ApiController]
     public class AuthController : ControllerBase
     {
+        private readonly IHttpContextAccessor _contextAccessor;
         private readonly IWebHostEnvironment _webHostEnvironment;
         private readonly ApplicationDbContext _dbContext;
-        public AuthController(IWebHostEnvironment webHostEnvironment, ApplicationDbContext dbContext) { 
-           _webHostEnvironment = webHostEnvironment;
+        public AuthController(IWebHostEnvironment webHostEnvironment, ApplicationDbContext dbContext, IHttpContextAccessor contextAccessor)
+        {
+            _webHostEnvironment = webHostEnvironment;
             _dbContext = dbContext;
+            _contextAccessor = contextAccessor;
         }
         [HttpPost]
         [Route("login")]
-        public IActionResult Login(string email, string password) {
+        public IActionResult Login(string email, string password)
+        {
             try
             {
+                var userExist = _dbContext.Users.Where(x => x.Email == email && x.Password == password).FirstOrDefault();
+                if (userExist != null)
+                {
+                    _contextAccessor.HttpContext.Session.SetInt32("UserId", userExist.Id);
+                    _contextAccessor.HttpContext.Session.SetString("UserName", userExist.Name);
+                    if (userExist.UserRole == EnumValues.EnumUserRole.Admin)
+                    {
+                        return StatusCode(200, "Admin");
+                    }
+                    else if (userExist.UserRole == EnumValues.EnumUserRole.Blogger)
+                    {
+                        return StatusCode(200, "Blogger");
+                    }
+                    else
+                    {
+                        return StatusCode(200, "User");
+                    }
+                }
+                return StatusCode(401, "User not found");
 
             }
             catch (Exception ex)
             {
                 return StatusCode(500, new { error = "Internal server error", message = ex.Message });
             }
-            return Ok();
         }
 
         [HttpPost]
